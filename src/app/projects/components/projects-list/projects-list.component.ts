@@ -8,6 +8,7 @@ import { ProjectsService } from '../../projects.service';
   styleUrls: ['./projects-list.component.scss']
 })
 export class ProjectsListComponent implements OnInit {
+  public pageTitle = 'Projects';
   public projects = [];
 
   constructor(
