@@ -14,11 +14,13 @@
         <thead>
           <tr>
             <th>Name</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let project of projects">
             <td>{{ project.name }}</td>
+            <td><a [routerLink]="['/projects', project.id]">Detail</a></td>
           </tr>
         </tbody>
       </table>
