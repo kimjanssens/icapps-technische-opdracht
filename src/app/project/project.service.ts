@@ -8,7 +8,7 @@ import { IProject } from './project.types';
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsService {
+export class ProjectService {
   private githubUrl = 'https://api.github.com/repositories';
 
   constructor(

@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { IProject } from '../../project.types';
-import { ProjectsService } from '../../projects.service';
+import { ProjectService } from '../../project.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -17,7 +17,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private projectsService: ProjectsService
+    private projectService: ProjectService
   ) { }
 
   public ngOnInit(): void {
@@ -26,7 +26,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     if (param) {
       const id = +param;
 
-      this.projectsService.getProject(id)
+      this.projectService.getProject(id)
         .pipe(
           takeUntil(this.destroy$)
         )
